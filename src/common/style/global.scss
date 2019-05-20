@@ -1,0 +1,53 @@
+@import url('./font.scss');
+@import url('./reset.scss');
+@import url('./mixin.scss');
+
+:global {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  *,
+  :after,
+  :before {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #2d4054;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  img {
+    border-style: none;
+    vertical-align: middle;
+  }
+
+  .clearfix:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .hide {
+    display: none !important;
+  }
+}
