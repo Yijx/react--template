@@ -10,7 +10,7 @@ module.exports = function override(config, env) {
             'api': resolve('src/api'),
             'base': resolve('src/base'),
             'common': resolve('src/common'),
-            'components': resolve('src/components'),
+            'component': resolve('src/component'),
             'router': resolve('src/router')
         },
         extensions: ['.js', '.jsx', '.scss']

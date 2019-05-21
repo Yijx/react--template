@@ -18,6 +18,7 @@ class App extends Component {
     componentDidMount() {
         this.initPage();
     }
+    // 页面主体宽度自适应，屏幕宽度-侧边栏
     initPage = () => {
         this.initWidth();
         window.addEventListener('resize', resizeThrottler(this.initWidth, false));

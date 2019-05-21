@@ -1,0 +1,21 @@
+.noramalTable {
+    table {
+        // 有关表格宽度设置，按此可设计宽度
+        table-layout: fixed !important;
+
+        // 设置表格高度，需要移除padding在进行设置.表头同理
+        .ant-table-tbody>tr>td {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 0 0 16px;
+        }
+
+        // 指定某一列需要省略号和宽度
+        .ant-table-tbody>tr>td:nth-child(6) {
+            width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
