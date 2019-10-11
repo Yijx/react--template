@@ -1,0 +1,69 @@
+// 页面最小宽度适应 < 1366
+@mixin minWidth {
+    min-width: 1300px;
+}
+
+// 省略号
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+// 垂直居中
+@mixin verticalCenter($height) {
+    height: $height;
+    line-height: $height;
+}
+
+// 垂直水平居中
+@mixin completelyCenter($height) {
+    @include verticalCenter($height);
+    text-align: center;
+}
+
+// 块级元素垂直居中
+@mixin blockVerticalCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// 块级元素垂直水平居中(需要父级元素position: relative;支持)
+@mixin blockCompletelyCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin flexVerticalCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    @include flexVerticalCenter;
+    justify-content: center;
+}
+
+@mixin flexStart {
+    @include flexVerticalCenter;
+    justify-content: flex-start;
+}
+
+@mixin flexEnd {
+    @include flexVerticalCenter;
+    justify-content: flex-end;
+}
+
+@mixin flexSpaceBetween {
+    @include flexVerticalCenter;
+    justify-content: space-between;
+}
+
+@mixin flexSpaceAround {
+    @include flexVerticalCenter;
+    justify-content: space-around;
+}

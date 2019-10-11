@@ -1,48 +1,77 @@
-# 北京市金融局内网项目
+# React 模板
 
-## 基于create-react-app(react-scripts)
+## 基于 create-react-app(react-scripts)
 
 ### 开发环境
-* react 16.8.6
-* react-scripts 3.0.1
-* node 10.15.3
-* npm 6.4.1
 
+- react 16.10.2
+- react-scripts 3.2.0
+- node [10.16.3, 12.8.1)
+- npm [6.9.0, 6.10.3)
+- git 2.22.0
 
-### 目录环境
-```
-public                                // 默认生成的目录
-scripts                               // 默认生成的目录
-src                                   // 项目源码目录
-    |-api                             // 接口
-    |-base                            // 业务功能界面
-    |-common                          // 公共图片，css，js
-        |-font
-        |-image
-        |-js
-        |-style
-    |-component                       // 组件
-    |-router                          // 路由设置
-    App.jsx                           // 入口页面jsx
-    App.scss                          // 总体布局
-    index.jsx                         // 入口项目jsx
-config-overrides.js                   // 有关webpack其他配置（别名等）
-```
+### CSS Modules 配置
 
-### 运行
-* 安装
+- 遵循 create-react-app 文档配置，使用官方推荐的 xxx.module.scss 方式自动开启
+
+### Webpack 拓展配置
+
+- **不要使用 npm run eject 破坏式构建方法**
+- 使用 react-app-rewired 配合 customize-cra 在 config-overrides.js 中进行配置
+- [react-app-rewired](https://github.com/timarney/react-app-rewired)
+- [customize-cra](https://github.com/arackaf/customize-cra)
+
+### 命令
+
+- 安装 cnpm（务必）
+  ```
+  npm install -g cnpm --registry=https://registry.npm.taobao.org
+  ```
+- 安装依赖
+  ```
+  $ cnpm i
+  ```
+- 本地运行项目
+  ```
+  $ npm start
+  ```
+- 打包项目
+  ```
+  $ npm run build
+  ```
+- 包大小解析
+  - 简单版
     ```
-    cnpm i
+    $ npm run analyze
     ```
-* 运行
+  - 高级版
     ```
-    npm start
+    $ npm run advanced-analyze
     ```
-* 打包
+- 提交代码
+  ~~git commit -m 'xxx'~~ → <br/>
+  ```
+  $ npm run commit
+  ```
+  - 自动提交
     ```
-    npm run build
+    $ ./scripts/gitPush.sh
     ```
-* 更新
-    * 安装 npm dependency（vscode扩展）
-    * 进入package.json
-    * 右键执行npm update
+- 代码统计
+  ```
+  $ npm run cloc
+  ```
+- 更新依赖
+  - 安装 npm dependency(vscode 扩展)
+  - 进入 package.json
+  - 右键执行 Npm update (latest)
+  - 完成后执行 cnpm i
+  - 若报错或者运行缓慢可在 setting.json 中配置
+    `"npm.registry": "https://registry.npm.taobao.org"`
+    再次尝试
+
+### 注意
+
+- 兼容 ie11
+- 懒加载/路由分割 使用 React 原生方法
+- 可以 0 配置 或者在 config-overrides.js 中任意配置
