@@ -23,7 +23,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "npm run lint:js",
+      "npm run lint",
       "git add"
     ]
   },
