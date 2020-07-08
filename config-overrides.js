@@ -30,8 +30,10 @@ module.exports = override(
         style: true
     }),
     addLessLoader({ // 自定义antd主题 二者见antd文档
-        javascriptEnabled: true,
-        modifyVars: { '@primary-color': '#DC312A' }
+        lessOptions: {
+            javascriptEnabled: true,
+            modifyVars: { '@primary-color': '#DC312A' }
+        }
     }),
     addWebpackResolve({ // 别名配置
         alias: {
