@@ -1,14 +1,14 @@
-# React 模板
+# React 简易框架
 
 ## 基于 create-react-app(react-scripts)
 
 ### 开发环境
 
-- react 16.10.2
-- react-scripts 3.2.0
-- node [10.16.3, 12.8.1)
-- npm [6.9.0, 6.10.3)
-- git 2.22.0
+- react 16.13.1
+- react-scripts 3.4.1
+- node [10.16.3, 12.18.1)
+- npm [6.9.0, 6.14.5)
+- git 2.26.2
 
 ### CSS Modules 配置
 

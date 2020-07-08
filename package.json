@@ -74,6 +74,7 @@
     "less-loader": "^6.2.0",
     "progress-bar-webpack-plugin": "^2.1.0",
     "react-app-rewired": "^2.1.6",
+    "source-map-explorer": "^2.4.2",
     "webpack-bundle-analyzer": "^3.8.0"
   }
 }
